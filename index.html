@@ -132,7 +132,7 @@ textarea{resize:vertical;min-height:80px}
       <div class="sel-card" id="card_prim" onclick="toggleCard('prim')">
         <div class="ic">🍇</div>
         <div class="title">Primary Fermentation</div>
-        <div class="sub">Yeast culture for grapes fermentation — red, white, ros&eacute;</div>
+        <div class="sub">Yeast culture for wine — red, white, ros&eacute;</div>
       </div>
       <div class="sel-card" id="card_cider" onclick="toggleCard('cider')">
         <div class="ic">🍏</div>
@@ -142,7 +142,7 @@ textarea{resize:vertical;min-height:80px}
       <div class="sel-card" id="card_second" onclick="toggleCard('second')">
         <div class="ic">🥂</div>
         <div class="title">Second Fermentation</div>
-        <div class="sub">Charmat (autoclave) or Champenoise (tirage — Classic method)</div>
+        <div class="sub">Charmat (autoclave) or Champenoise (tirage) — sparkling wine</div>
       </div>
     </div>
     <p class="err-msg" id="sel_err">Please select at least one option to continue.</p>
@@ -161,17 +161,10 @@ textarea{resize:vertical;min-height:80px}
     <div class="section-block">
       <h3>Juice volumes processed per day</h3>
       <div class="grid2">
-        <div class="field"><label>Red juice</label><div class="inrow"><input type="text" placeholder="0"><span class="unit"><select style="border:0;outline:0;background:transparent;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--muted);cursor:pointer"><option>L</option><option>us gal</option></select></span></div></div>
-        <div class="field"><label>White / Ros&eacute; juice</label><div class="inrow"><input type="text" placeholder="0"><span class="unit"><select style="border:0;outline:0;background:transparent;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--muted);cursor:pointer"><option>L</option><option>us gal</option></select></span></div></div>
+        <div class="field"><label>Red wine juice</label><div class="inrow"><input type="text" placeholder="0"><span class="unit">L / us gal</span></div></div>
+        <div class="field"><label>White / Ros&eacute; juice</label><div class="inrow"><input type="text" placeholder="0"><span class="unit">L / us gal</span></div></div>
       </div>
       <div class="field"><label>Grape varieties processed</label><input type="text" placeholder="e.g. Chardonnay, Pinot Noir&hellip;"></div>
-      <div class="field"><label>Is there an overlap between red and white / ros&eacute; fermentations during the season?</label>
-        <div class="radio-group">
-          <label><input type="radio" name="overlap"> Yes</label>
-          <label><input type="radio" name="overlap"> No</label>
-          <label><input type="radio" name="overlap"> Sometimes</label>
-        </div>
-      </div>
     </div>
     <div class="section-block">
       <h3>Yeast usage</h3>
@@ -192,14 +185,11 @@ textarea{resize:vertical;min-height:80px}
     <div class="section-block">
       <h3>Yeast types used or planned</h3>
       <div class="check-group">
-        <label><input type="checkbox"> Active dried yeasts</label>
+        <label><input type="checkbox"> Active dry yeasts</label>
         <label><input type="checkbox"> Indigenous (selected)</label>
         <label><input type="checkbox"> Indigenous (to select)</label>
         <label><input type="checkbox"> Indigenous (spontaneous)</label>
-        <label><input type="checkbox" id="other_yeast_1" onchange="toggleOther('other_yeast_1','other_yeast_text_1')"> Other</label>
-      </div>
-      <div id="other_yeast_text_1" style="display:none;margin-top:10px">
-        <input type="text" placeholder="Please describe briefly&hellip;">
+        <label><input type="checkbox"> Other</label>
       </div>
     </div>
     <div class="section-block">
@@ -218,17 +208,14 @@ textarea{resize:vertical;min-height:80px}
       </div>
     </div>
     <div class="section-block">
-      <h3>Sugar source available for the CellarMATE</h3>
+      <h3>Sugars available in the cellar</h3>
       <div class="check-group">
         <label><input type="checkbox"> MCR</label>
         <label><input type="checkbox"> Sucrose</label>
         <label><input type="checkbox"> Clarified must</label>
         <label><input type="checkbox"> Glucose + Fructose</label>
         <label><input type="checkbox"> None</label>
-        <label><input type="checkbox" id="other_sugar_1" onchange="toggleOther('other_sugar_1','other_sugar_text_1')"> Other</label>
-      </div>
-      <div id="other_sugar_text_1" style="display:none;margin-top:10px">
-        <input type="text" placeholder="Please describe briefly&hellip;">
+        <label><input type="checkbox"> Other</label>
       </div>
     </div>
     <div class="section-block">
@@ -238,14 +225,6 @@ textarea{resize:vertical;min-height:80px}
         <label><input type="radio" name="nutr_p"> Organic</label>
         <label><input type="radio" name="nutr_p"> Inorganic</label>
         <label><input type="radio" name="nutr_p"> Organic + Inorganic</label>
-      </div>
-      <div class="field" style="margin-top:12px">
-        <label>Nutrient format</label>
-        <div class="radio-group">
-          <label><input type="radio" name="nutr_p_form"> Liquid</label>
-          <label><input type="radio" name="nutr_p_form"> Powder</label>
-          <label><input type="radio" name="nutr_p_form"> Both</label>
-        </div>
       </div>
     </div>
     <div class="section-block">
@@ -271,7 +250,6 @@ textarea{resize:vertical;min-height:80px}
     <div class="seg">Yeast culture for cider first fermentation</div>
     <div class="section-block">
       <h3>Juice volumes processed per day</h3>
-      <div class="field"><label>Juice volume processed per day</label><div class="inrow"><input type="text" placeholder="0" style="flex:1;min-width:0"><span class="unit"><select style="border:0;outline:0;background:transparent;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--muted);cursor:pointer"><option>L</option><option>us gal</option></select></span></div></div>
       <div class="field"><label>Kinds of concentrated juices processed</label><input type="text" placeholder="e.g. apple, pear&hellip;"></div>
       <div class="grid2">
         <div class="field"><label>LSA yeast currently used</label><div class="inrow"><input type="text" placeholder="0"><span class="unit">g/L</span></div></div>
@@ -289,28 +267,22 @@ textarea{resize:vertical;min-height:80px}
     <div class="section-block">
       <h3>Yeast types used or planned</h3>
       <div class="check-group">
-        <label><input type="checkbox"> Active dried yeasts</label>
+        <label><input type="checkbox"> Active dry yeasts</label>
         <label><input type="checkbox"> Indigenous (selected)</label>
         <label><input type="checkbox"> Indigenous (to select)</label>
         <label><input type="checkbox"> Indigenous (spontaneous)</label>
-        <label><input type="checkbox" id="other_yeast_2" onchange="toggleOther('other_yeast_2','other_yeast_text_2')"> Other</label>
-      </div>
-      <div id="other_yeast_text_2" style="display:none;margin-top:10px">
-        <input type="text" placeholder="Please describe briefly&hellip;">
+        <label><input type="checkbox"> Other</label>
       </div>
     </div>
     <div class="section-block">
-      <h3>Sugar source available for the CellarMATE</h3>
+      <h3>Sugars available</h3>
       <div class="check-group">
         <label><input type="checkbox"> Concentrated juice</label>
         <label><input type="checkbox"> Sucrose</label>
         <label><input type="checkbox"> Clarified must</label>
         <label><input type="checkbox"> Glucose + Fructose</label>
         <label><input type="checkbox"> None</label>
-        <label><input type="checkbox" id="other_sugar_2" onchange="toggleOther('other_sugar_2','other_sugar_text_2')"> Other</label>
-      </div>
-      <div id="other_sugar_text_2" style="display:none;margin-top:10px">
-        <input type="text" placeholder="Please describe briefly&hellip;">
+        <label><input type="checkbox"> Other</label>
       </div>
     </div>
     <div class="section-block">
@@ -320,14 +292,6 @@ textarea{resize:vertical;min-height:80px}
         <label><input type="radio" name="nutr_c"> Organic</label>
         <label><input type="radio" name="nutr_c"> Inorganic</label>
         <label><input type="radio" name="nutr_c"> Organic + Inorganic</label>
-      </div>
-      <div class="field" style="margin-top:12px">
-        <label>Nutrient format</label>
-        <div class="radio-group">
-          <label><input type="radio" name="nutr_c_form"> Liquid</label>
-          <label><input type="radio" name="nutr_c_form"> Powder</label>
-          <label><input type="radio" name="nutr_c_form"> Both</label>
-        </div>
       </div>
     </div>
     <div class="section-block">
@@ -358,8 +322,8 @@ textarea{resize:vertical;min-height:80px}
         <div class="field"><label>Dried yeast currently used</label><div class="inrow"><input type="text" placeholder="0"><span class="unit">g/L</span></div></div>
       </div>
       <div class="grid2">
-        <div class="field"><label>Max. litres inoculated in a week</label><div class="inrow"><input type="text" placeholder="0"><span class="unit"><select style="border:0;outline:0;background:transparent;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--muted);cursor:pointer"><option>L</option><option>us gal</option></select></span></div></div>
-        <div class="field"><label>Final population at inoculation</label><div class="inrow"><input type="text" placeholder="target population"><span class="unit">cells/mL</span></div></div>
+        <div class="field"><label>Max. litres inoculated in a week</label><div class="inrow"><input type="text" placeholder="0"><span class="unit">L</span></div></div>
+        <div class="field"><label>Final population at inoculation</label><div class="inrow"><input type="text" placeholder="0.8&ndash;2.0"><span class="unit">10&sup6; cells/mL</span></div></div>
       </div>
       <div class="field"><label>Yeast types used simultaneously</label>
         <div class="radio-group"><label><input type="radio" name="yt_ch"> Only one</label><label><input type="radio" name="yt_ch"> More than one</label></div>
@@ -374,11 +338,11 @@ textarea{resize:vertical;min-height:80px}
     <div class="section-block">
       <h3>Tirage &mdash; Champenoise (Classic method)</h3>
       <div class="grid2">
-        <div class="field"><label>Base wine inoculated daily</label><div class="inrow"><input type="text" placeholder="0"><span class="unit"><select style="border:0;outline:0;background:transparent;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--muted);cursor:pointer"><option>L</option><option>us gal</option></select></span></div></div>
+        <div class="field"><label>Base wine inoculated daily</label><div class="inrow"><input type="text" placeholder="0"><span class="unit">L / us gal</span></div></div>
         <div class="field"><label>Dried yeast currently used</label><div class="inrow"><input type="text" placeholder="0"><span class="unit">g/L</span></div></div>
       </div>
       <div class="grid2">
-        <div class="field"><label>Final population at inoculation</label><div class="inrow"><input type="text" placeholder="target population"><span class="unit">cells/mL</span></div></div>
+        <div class="field"><label>Final population at inoculation</label><div class="inrow"><input type="text" placeholder="0.8&ndash;2.0"><span class="unit">10&sup6; cells/mL</span></div></div>
         <div class="field"><label>Desired inoculum rate</label><div class="inrow"><input type="text" placeholder="3"><span class="unit">%</span></div></div>
       </div>
       <div class="field"><label>Sugar used in tirage</label>
@@ -442,21 +406,6 @@ textarea{resize:vertical;min-height:80px}
 </div>
 
 <script>
-// Toggle 'Other' text field
-function toggleOther(cbId, textId){
-  const cb = document.getElementById(cbId);
-  const box = document.getElementById(textId);
-  box.style.display = cb.checked ? 'block' : 'none';
-  if(cb.checked) box.querySelector('input').focus();
-}
-
-// Set today's date as default
-document.addEventListener('DOMContentLoaded', function(){
-  const d = new Date();
-  const today = d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-  document.getElementById('f_date').value = today;
-});
-
 const sel={prim:false,cider:false,second:false};
 
 function clearErr(id){
